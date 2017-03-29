@@ -1,0 +1,40 @@
+{
+  "name": "test-front-devs",
+  "version": "1.0.0",
+  "description": "test project Angular 1.6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && webpack-dev-server --port=9099"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanyaagisheva/test-front-devs.git"
+  },
+  "keywords": [
+    "test",
+    "catalog",
+    "products"
+  ],
+  "author": "Agisheva T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanyaagisheva/test-front-devs/issues"
+  },
+  "homepage": "https://github.com/tanyaagisheva/test-front-devs#readme",
+  "devDependencies": {
+    "angular": "^1.6.3",
+    "angular-resource": "^1.6.3",
+    "angular-ui-router": "^0.4.2",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.2",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "angular-resource": "^1.6.3"
+  }
+}

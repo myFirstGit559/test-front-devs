@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "GIACKET",
+    "imgs": "w_jacket.jpg",
+    "sizes": ["XS","S","L","M","X"],
+    "colors": null,
+    "price": "60"
+  },
+  {
+    "id": 2,
+    "name": "TREKKING SHOES",
+    "imgs": "w_sneakers.jpg",
+    "sizes": ["36","37","38","39"],
+    "colors": null,
+    "price": "80"
+  },
+  {
+    "id": 3,
+    "name": "T-SHIRT",
+    "imgs": "w_tshirt.jpg",
+    "sizes": ["S","L","M"],
+    "colors": ["#d3a7ac","#ffffff"],
+    "price": "20"
+  },
+  {
+    "id": 4,
+    "name": "TREKKING SHOES",
+    "imgs": "w_sneakers.jpg",
+    "sizes": ["36","37","38","39"],
+    "colors": null,
+    "price": "80"
+  },
+  {
+    "id": 5,
+    "name": "T-SHIRT",
+    "imgs": "w_tshirt.jpg",
+    "sizes": ["S","L","M"],
+    "colors": ["#d3a7ac","#ffffff"],
+    "price": "20"
+  }
+]
