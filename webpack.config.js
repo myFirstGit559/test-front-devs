@@ -8,7 +8,7 @@ const config = {
     context: __dirname + '/app',
     entry: './index.js',
     resolve: {
-        extensions: ['.js', '.less', '.png', '.jpg'],
+        extensions: ['.js', '.less', '.png', '.jpg', '.json'],
         modules: ['node_modules']
     },
     devServer: {
@@ -29,6 +29,10 @@ const config = {
                 loaders: ['file-loader?name=./img/[name].[ext]',
                           'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
                 ]
+            },
+            {
+                test: /\.json$/,
+                loader: 'file-loader?name=./data/[name].json'
             }
         ]
     },
