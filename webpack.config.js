@@ -8,7 +8,7 @@ const config = {
     context: __dirname + '/app',
     entry: './index.js',
     resolve: {
-        extensions: ['.js', '.less'],
+        extensions: ['.js', '.less', '.png', '.jpg'],
         modules: ['node_modules']
     },
     devServer: {
@@ -23,6 +23,12 @@ const config = {
             {
                 test: /\.less$/i,
                 loader: extractLESS.extract(['css-loader', 'less-loader' ])
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                loaders: ['file-loader?name=./img/[name].[ext]',
+                          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ]
             }
         ]
     },

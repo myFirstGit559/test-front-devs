@@ -28,6 +28,8 @@
     "angular-ui-router": "^0.4.2",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "image-webpack-loader": "^3.3.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
     "style-loader": "^0.16.1",

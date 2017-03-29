@@ -5,3 +5,14 @@ body {
   padding: 0;
   background: @main;
 }
+.logo {
+  margin: 25px auto 42px;
+  display: block;
+  max-width: 100%;
+  min-width: 100px;
+  height: auto;
+
+  .responsive(@mobile,{
+      height: 40px;
+  });
+}
