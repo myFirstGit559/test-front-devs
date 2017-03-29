@@ -8,7 +8,7 @@ const config = {
     context: __dirname + '/app',
     entry: './index.js',
     resolve: {
-        extensions: ['.js', '.less', '.png', '.jpg', '.json'],
+        extensions: ['.js', '.less', '.png', '.jpg', '.json', 'html'],
         modules: ['node_modules']
     },
     devServer: {
@@ -33,6 +33,10 @@ const config = {
             {
                 test: /\.json$/,
                 loader: 'file-loader?name=./data/[name].json'
+            },
+            {
+                test: /\.html$/,
+                loader: 'file-loader?name=./templates/[name].html'
             }
         ]
     },

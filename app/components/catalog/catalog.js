@@ -1,3 +1,7 @@
-/**
- * Created by Таня on 28.03.2017.
- */
+module.exports = function(shopApp){
+    shopApp.component('catalog', catalogConfig);
+
+    function catalogConfig(){
+
+    }
+};

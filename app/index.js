@@ -10,4 +10,6 @@ const angular = require('angular');
 const uirouter = require('angular-ui-router');
 const sanitize = require('angular-sanitize');
 const resource = require('angular-resource');
-const directiveModule = angular.module('shopApp', []);
+const shopApp = angular.module('shopApp', [sanitize,resource,uirouter]);
+
+require('./config')(shopApp);
