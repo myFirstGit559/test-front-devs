@@ -25,6 +25,7 @@
   "devDependencies": {
     "angular": "^1.6.3",
     "angular-resource": "^1.6.3",
+    "angular-sanitize": "^1.6.3",
     "angular-ui-router": "^0.4.2",
     "css-loader": "^0.27.3",
     "extract-text-webpack-plugin": "^2.1.0",
