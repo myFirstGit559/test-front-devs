@@ -6,7 +6,8 @@ module.exports = function(shopApp){
         templateUrl: require('./slider.html'),
         bindings: {
             prodList: '<',
-            show: '=ngShow'
+            show: '=ngShow',
+            type: '@'
         },
         controller: sliderCtrl
     };
