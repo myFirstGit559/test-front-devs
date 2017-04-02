@@ -1,3 +1,12 @@
-/**
- * Created by Таня on 28.03.2017.
- */
+module.exports = function(shopApp){
+    const selectCtrl = function () {
+        const ctrl = this;
+
+
+    };
+    const selectConfig = {
+        templateUrl: require('./select.html'),
+        controller: selectCtrl
+    };
+    shopApp.component('selectCustomer', selectConfig);
+};

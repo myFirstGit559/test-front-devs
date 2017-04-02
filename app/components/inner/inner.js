@@ -1,3 +1,11 @@
-/**
- * Created by Таня on 28.03.2017.
- */
+module.exports = function(shopApp){
+    const innerCtrl = function () {
+        const ctrl = this;
+    };
+    const innerConfig = {
+        templateUrl: require('./inner.html'),
+        controller: innerCtrl
+    };
+    shopApp.component('inner', innerConfig);
+};
+

@@ -1,42 +1,41 @@
 [
   {
-    "id": 1,
-    "name": "T-SHIRT",
-    "imgs": "m_tshirt.jpg",
-    "sizes": ["XL","L"],
-    "colors": ["#165eb9","#ffe637","#535253"],
-    "price": "5"
+  "id": 1,
+  "name": "T-SHIRT",
+  "imgs": "m_tshirt.jpg",
+  "sizes": ["XL", "L"],
+  "colors": ["#165eb9", "#ffe637", "#535253"],
+  "price": "5"
   },
   {
-    "id": 2,
-    "name": "PANTS FORCLAZ",
-    "imgs": "m_pants.jpg",
-    "sizes": ["XL","L","M"],
-    "colors": null,
-    "price": "30"
+  "id": 2,
+  "name": "PANTS FORCLAZ",
+  "imgs": "m_pants.jpg",
+  "sizes": ["XL", "L", "M"],
+  "colors": null,
+  "price": "30"
   },
   {
-    "id": 3,
-    "name": "BACKPACK",
-    "imgs": "m_backpack.jpg",
-    "sizes": "10LITRI",
-    "colors": null,
-    "price": "60"
+  "id": 3,
+  "name": "BACKPACK",
+  "imgs": "m_backpack.jpg",
+  "sizes": "10LITRI",
+  "colors": null,
+  "price": "60"
   },
   {
-    "id": 4,
-    "name": "PANTS FORCLAZ",
-    "imgs": "m_pants.jpg",
-    "sizes": ["XL","L","M"],
-    "colors": null,
-    "price": "30"
+  "id": 4,
+  "name": "PANTS FORCLAZ",
+  "imgs": "m_pants.jpg",
+  "sizes": ["XL", "L", "M"],
+  "colors": null,
+  "price": "30"
   },
   {
-    "id": 5,
-    "name": "BACKPACK",
-    "imgs": "m_backpack.jpg",
-    "sizes": "10LITRI",
-    "colors": null,
-    "price": "60"
-  }
-]
+  "id": 5,
+  "name": "BACKPACK",
+  "imgs": "m_backpack.jpg",
+  "sizes": "10LITRI",
+  "colors": null,
+  "price": "60"
+  }]
