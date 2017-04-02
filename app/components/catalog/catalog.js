@@ -1,16 +1,21 @@
 module.exports = function(shopApp){
-    const catalogCtrl = function () {
+    const catalogCtrl = function (prodService) {
         const ctrl = this;
-        ctrl.show = {
-            men: true,
-            women: true,
-            children: true
-        };
-        ctrl.data = {
-            men: null,
-            women: null,
-            children: null
-        }
+        ctrl.data = {};
+        ctrl.show = {};
+        prodService
+            .getJson('men', function(data) {
+                ctrl.data.men = data;
+                ctrl.show.men = true;
+            })
+            .getJson('women', function(data){
+                ctrl.data.women = data;
+                ctrl.show.women = true;
+            })
+            .getJson('children', function(data) {
+                ctrl.data.children = data;
+                ctrl.show.children = true;
+            });
     };
     const catalogConfig = {
         templateUrl: require('./catalog.html'),

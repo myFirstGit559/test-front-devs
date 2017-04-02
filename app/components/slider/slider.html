@@ -1,9 +1,20 @@
 <div class="slider__wrap">
     <div class="slider__unit" ng-repeat="product in $ctrl.prodList">
-        <div class="slider__unit_szc"></div>
-        <div class="slider__unit_img">
+        <div class="slider__unit_szc">
+            <div class="size">
+                <p ng-bind="product.sizes" ng-show="product.emptySize"></p>
+                <select ng-model="$ctrl.product.size" ng-hide="product.emptySize" ng-options="option as option for option in product.sizes"></select>
+            </div>
+            <div class="color">
 
+            </div>
         </div>
-        <div class="slider__unit_nmp"></div>
+        <div class="slider__unit_img">
+            <img ng-src="../img/{{product.imgs}}">
+        </div>
+        <div class="slider__unit_nmp">
+            <div class="name" ng-bind="product.name"></div>
+            <div class="price" ng-bind="product.price"></div>
+        </div>
     </div>
 </div>
