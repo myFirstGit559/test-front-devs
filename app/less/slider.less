@@ -1,16 +1,118 @@
-.slider__wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  max-width: 1087px;
-  min-width: 300px;
+.hr {
+  width: 100%;
+  height: 3px;
+  background: @inactive;
+  display: inline-block;
+  margin-bottom: 50px;
 }
-.slider__unit {
-  border: 3px solid @blocks;
-  background: @blocks;
-  width: 307px;
-  height: 365px;
-  display: flex;
-  flex-direction: column;
+.catalog__wrap slider:nth-child(2*n) {
+  .slider_title {
+    float: left;
+  }
+}
+.catalog__wrap slider:nth-child(2*n + 1) {
+  .slider_title {
+    float: right;
+  }
+}
+.slider{
+  &_title {
+    text-transform: uppercase;
+    font-size: 20px;
+    background: @main;
+    color: @text;
+  }
+  &_pagination {
+    color: @decor;
+    .prev, .next {
+      display: inline-block;
+      width: 11px;
+      height: 13px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .prev {
+      background: url("../img/arrows.png") no-repeat 50px 0;
+    }
+    .next {
+      background: url("../img/arrows.png") no-repeat 70px 0;
+    }
+  }
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    max-width: 1087px;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  &__unit {
+    border: 6px solid @blocks;
+    background: @blocks;
+    width: (1087/3 + 60/3 - 60)/1087 * 100%;
+    height: 365px;
+    margin-right: 60px;
+    box-sizing: border-box;
+    display: flex;
+    min-width : 260px;
+    max-width: (1087/3 + 60/3 - 60)/1087 * 100%;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 18px 17px 23px;
+    cursor: pointer;
+    .responsive(@tablet,{
+      width: (@tablet/2 + 25/2 - 25)/@tablet * 100%;
+      margin-right: 25px;
+      max-width: (@tablet/2 + 25/2 - 25)/@tablet * 100%;
+    });
+    .responsive(@mobile,{
+      width: 300px;
+      margin-right: 0;
+      max-width: 300px;
+    });
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      border-color: @decor;
+      border-radius: 2px;
+    }
+    &_nmp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .price {
+        font-size: 22px;
+        color: @text;
+      }
+      .name {
+        font-size: 18px;
+        color: @decor;
+      }
+    }
+    &_szc {
+      display: flex;
+      justify-content: space-between;
+      .size p{
+        font-size: 18px;
+        color: @text;
+      }
+    }
+    &_img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.color-round {
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 4px;
 }
