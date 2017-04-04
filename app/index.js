@@ -6,11 +6,7 @@ const children = require('./data/children.json');
 //images
 const logo = require('./img/logo_google.png');
 require('./img/checkbox_checked.png');
-require('./img/arrows/back.png');
-require('./img/arrows/bottom.png');
-require('./img/arrows/left.png');
-require('./img/arrows/right.png');
-require('./img/arrows/top.png');
+require('./img/arrows.png');
 require('./img/products/m_backpack.jpg');
 require('./img/products/m_pants.jpg');
 require('./img/products/m_tshirt.jpg');
