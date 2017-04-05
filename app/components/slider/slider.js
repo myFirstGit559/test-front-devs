@@ -19,7 +19,7 @@ module.exports = function(shopApp){
             }
         };
         ctrl.inner = function(id) {
-            $state.go('product/'+ id);
+            $state.go('product',id);
         }
     };
     const sliderConfig = {
