@@ -1,6 +1,6 @@
 <div class="hr"><p class="slider_title" ng-bind="$ctrl.title"></p></div>
 <div class="slider_pagination">
-    <p>1/{{$ctrl.page}}</p>
+    <p>1 / {{$ctrl.page}}</p>
     <a class="prev"></a>
     <a class="next"></a>
 </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="slider__unit_nmp">
             <div class="name" ng-bind="product.name"></div>
-            <div class="price">{{product.price | number:2}}&euro;</div>
+            <div class="price">{{product.price | number:2}}<span>&euro;</span></div>
         </div>
     </div>
 </div>
