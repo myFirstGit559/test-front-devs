@@ -1,5 +1,6 @@
 .hr {
   width: 100%;
+  max-width: 1087px;
   height: 3px;
   background: @inactive;
   display: inline-block;
@@ -19,24 +20,42 @@
   &_title {
     text-transform: uppercase;
     font-size: 20px;
+    padding-right: 40px;
     background: @main;
     color: @text;
+    display: inline-block;
+    position: relative;
+    top: -8px
   }
   &_pagination {
+    width: 100%;
+    max-width: 1087px;
     color: @decor;
+    display: block;
+    text-align: right;
+    margin-bottom: 15px;
+    p {
+      font-size: 15px;
+      margin-bottom: 3px;
+      span {
+        font-family: sans-serif;
+        font-weight: 100;
+      }
+    }
     .prev, .next {
       display: inline-block;
       width: 11px;
       height: 13px;
+      cursor: pointer;
       &:hover {
         opacity: 0.8;
       }
     }
     .prev {
-      background: url("../img/arrows.png") no-repeat 50px 0;
+      background: url(../img/arrows.png) no-repeat -14px 0;
     }
     .next {
-      background: url("../img/arrows.png") no-repeat 70px 0;
+      background: url(../img/arrows.png) no-repeat -31px 0;
     }
   }
   &__wrap{
@@ -49,16 +68,19 @@
     max-width: 1087px;
     width: 100%;
     margin-bottom: 100px;
+    .responsive(@mobile,{
+      width: 307px;
+    });
   }
   &__unit {
-    border: 6px solid @blocks;
+    border: 5px solid @blocks;
     background: @blocks;
     width: (1087/3 + 60/3 - 60)/1087 * 100%;
     height: 365px;
     margin-right: 60px;
     box-sizing: border-box;
     display: flex;
-    min-width : 260px;
+    min-width: (1087/3 + 60/3 - 60)/1087 * 100%;
     max-width: (1087/3 + 60/3 - 60)/1087 * 100%;
     flex-direction: column;
     align-items: stretch;
@@ -68,12 +90,14 @@
     .responsive(@tablet,{
       width: (@tablet/2 + 25/2 - 25)/@tablet * 100%;
       margin-right: 25px;
+      min-width: (@tablet/2 + 25/2 - 25)/@tablet * 100%;
       max-width: (@tablet/2 + 25/2 - 25)/@tablet * 100%;
     });
     .responsive(@mobile,{
-      width: 300px;
+      width: 307px;
       margin-right: 0;
-      max-width: 300px;
+      min-width: 307px;
+      max-width: 307px;
     });
     &:last-child {
       margin-right: 0;

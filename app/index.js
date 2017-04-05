@@ -5,7 +5,6 @@ const women = require('./data/women.json');
 const children = require('./data/children.json');
 //images
 const logo = require('./img/logo_google.png');
-require('./img/checkbox_checked.png');
 require('./img/arrows.png');
 require('./img/products/m_backpack.jpg');
 require('./img/products/m_pants.jpg');
@@ -13,6 +12,12 @@ require('./img/products/m_tshirt.jpg');
 require('./img/products/w_jacket.jpg');
 require('./img/products/w_sneakers.jpg');
 require('./img/products/w_tshirt.jpg');
+//fonts
+require('./less/font/quicksand-bold-webfont.eot');
+require('./less/font/quicksand-bold-webfont.svg');
+require('./less/font/quicksand-bold-webfont.ttf');
+require('./less/font/quicksand-bold-webfont.woff');
+require('./less/font/quicksand-bold-webfont.woff2');
 //angular app
 const angular = require('angular');
 const uirouter = require('angular-ui-router');
