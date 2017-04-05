@@ -1,6 +1,7 @@
 module.exports = function (shopApp) {
     require('../components/index.js')(shopApp);
-    shopApp.config(function($stateProvider, $urlRouterProvider) {
+    shopApp.config(function($stateProvider, $urlRouterProvider,$locationProvider) {
+        $locationProvider.hashPrefix("");
         $urlRouterProvider.otherwise("");
         const catalog = {
             name: "catalog",
@@ -9,7 +10,7 @@ module.exports = function (shopApp) {
         };
         const inner = {
             name: "product",
-            url: "/product/:id",
+            url: "/product/:title/:id",
             template: "<inner></inner>"
         };
         $stateProvider

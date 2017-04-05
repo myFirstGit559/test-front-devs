@@ -37,10 +37,6 @@
     p {
       font-size: 15px;
       margin-bottom: 3px;
-      span {
-        font-family: sans-serif;
-        font-weight: 100;
-      }
     }
     .prev, .next {
       display: inline-block;
@@ -87,12 +83,12 @@
     justify-content: space-between;
     padding: 18px 17px 23px;
     cursor: pointer;
-    .responsive(@desctop, {
+/*    .responsive(@desctop, {
       width: (@desctop/3 + 25/3 - 25)/@desctop * 100%;
       margin-right: 25px;
       min-width: (@desctop/3 + 25/3 - 25)/@desctop * 100%;
       max-width: (@desctop/3 + 25/3 - 25)/@desctop * 100%;
-    });
+    });*/
     .responsive(@tablet,{
       width: (@tablet/2 + 25/2 - 25)/@tablet * 100%;
       margin-right: 25px;
@@ -119,6 +115,10 @@
       .price {
         font-size: 22px;
         color: @text;
+        span {
+          font-family: sans-serif;
+          font-weight: 100;
+        }
       }
       .name {
         font-size: 18px;
