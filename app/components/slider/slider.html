@@ -1,26 +1,26 @@
 <div class="hr"><p class="slider_title" ng-bind="$ctrl.title"></p></div>
 <div class="slider_pagination">
-    <p>1 / {{$ctrl.page}}</p>
-    <a class="prev"></a>
-    <a class="next"></a>
+    <p>{{$ctrl.currentPage + 1}} / {{$ctrl.page}}</p>
+    <button class="prev" ng-disabled="$ctrl.currentPage == 0" ng-click="$ctrl.currentPage=$ctrl.currentPage-1"></button>
+    <button class="next" ng-disabled="$ctrl.currentPage >= $ctrl.prodList.length/$ctrl.itemCount - 1" ng-click="$ctrl.currentPage=$ctrl.currentPage+1"></button>
 </div>
 <div class="slider__wrap">
-    <div class="slider__unit" ng-repeat="product in $ctrl.prodList|orderBy:$ctrl.sortBy:true" ng-click="$ctrl.inner(product.id)">
-        <div class="slider__unit_szc">
-            <div class="size">
-                <p ng-bind="product.sizes" ng-show="product.emptySize"></p>
-                <select ng-model="product.size" ng-hide="product.emptySize" ng-options="option as option for option in product.sizes"></select>
+        <div class="slider__unit" ng-repeat="product in $ctrl.prodList|orderBy:$ctrl.sortBy:true|pagination:$ctrl.currentPage * $ctrl.itemCount|limitTo:$ctrl.itemCount" ng-click="$ctrl.inner(product.id)">
+            <div class="slider__unit_szc">
+                <div class="size">
+                    <p ng-bind="product.sizes" ng-show="product.emptySize"></p>
+                    <select ng-model="product.size" ng-hide="product.emptySize" ng-options="option as option for option in product.sizes"></select>
+                </div>
+                <div class="color">
+                    <div class="color-round" ng-repeat="color in product.colors" style="background-color:{{color}}"></div>
+                </div>
             </div>
-            <div class="color">
-                <div class="color-round" ng-repeat="color in product.colors" style="background-color:{{color}}"></div>
+            <div class="slider__unit_img">
+                <img ng-src="../img/{{product.imgs}}">
+            </div>
+            <div class="slider__unit_nmp">
+                <div class="name" ng-bind="product.name"></div>
+                <div class="price">{{product.price | number:2}}<span>&euro;</span></div>
             </div>
         </div>
-        <div class="slider__unit_img">
-            <img ng-src="../img/{{product.imgs}}">
-        </div>
-        <div class="slider__unit_nmp">
-            <div class="name" ng-bind="product.name"></div>
-            <div class="price">{{product.price | number:2}}<span>&euro;</span></div>
-        </div>
-    </div>
 </div>
