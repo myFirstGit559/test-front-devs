@@ -1,8 +1,10 @@
 module.exports = function(shopApp){
     const paginationFn = function(){
-        return function(input, start) {
+        return function(list, start) {
             start = +start;
-            return input.slice(start);
+            if (angular.isDefined(list)) {
+                return list.slice(start);
+            }
         }
     };
     shopApp.filter('pagination', paginationFn);
