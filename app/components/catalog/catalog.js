@@ -1,6 +1,14 @@
 module.exports = function(shopApp){
     const catalogCtrl = function (prodService) {
         const ctrl = this;
+        ctrl.$onInit = function() {
+            console.log(ctrl.WhatToShow);
+        };
+        //filter checkboxes
+        ctrl.changeShow = function() {
+            console.log(1);
+            ctrl.show = ctrl.WhatToShow;
+        };
         ctrl.data = {};
         ctrl.show = {};
         prodService

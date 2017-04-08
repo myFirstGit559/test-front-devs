@@ -1,5 +1,8 @@
+<filter-menu what-to-show="$ctrl.WhatToShow" change-show="$ctrl.changeShow()"></filter-menu>
+<select-sort sort-by="$ctrl.property" change-sort-by="$ctrl.changeSortBy()"></select-sort>
 <div class="catalog__wrap">
-    <slider show="$ctrl.show.men" prod-list="$ctrl.data.men" title="men"></slider>
-    <slider show="$ctrl.show.women" prod-list="$ctrl.data.women" title="women"></slider>
-    <slider show="$ctrl.show.children" prod-list="$ctrl.data.children" title="children"></slider>
+    <slider ng-show="$ctrl.show.men" prod-list="$ctrl.data.men" title="men" sort-by="$ctrl.property"></slider>
+    <slider ng-show="$ctrl.show.women" prod-list="$ctrl.data.women" title="women" sort-by="$ctrl.property"></slider>
+    <slider ng-show="$ctrl.show.children" prod-list="$ctrl.data.children" title="children" sort-by="$ctrl.property"></slider>
 </div>
+
