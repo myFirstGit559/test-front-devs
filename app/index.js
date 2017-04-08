@@ -13,11 +13,11 @@ require('./img/products/w_jacket.jpg');
 require('./img/products/w_sneakers.jpg');
 require('./img/products/w_tshirt.jpg');
 //fonts
-require('./less/font/quicksand-bold-webfont.eot');
-require('./less/font/quicksand-bold-webfont.svg');
-require('./less/font/quicksand-bold-webfont.ttf');
-require('./less/font/quicksand-bold-webfont.woff');
-require('./less/font/quicksand-bold-webfont.woff2');
+require('./font/quicksand-bold-webfont.eot');
+require('./font/quicksand-bold-webfont.svg');
+require('./font/quicksand-bold-webfont.ttf');
+require('./font/quicksand-bold-webfont.woff');
+require('./font/quicksand-bold-webfont.woff2');
 //angular app
 const angular = require('angular');
 const uirouter = require('angular-ui-router');

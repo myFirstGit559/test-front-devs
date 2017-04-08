@@ -27,6 +27,7 @@ module.exports = function(shopApp){
         bindings: {
             prodList: '=',
             show: '=ngShow',
+            sortBy: '=',
             title: '@'
         },
         controller: sliderCtrl

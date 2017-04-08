@@ -1,0 +1,56 @@
+.SameCheckboxBefore {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: 1px solid @inactive;
+}
+.SameCheckbox {
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.wrap_category__check {
+  background: @blocks;
+  width: 100%;
+}
+.category__check {
+  width: 100%;
+  max-width: 1087px;
+  background: @blocks;
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+  justify-content: space-between;
+  &_checkboxes {
+    display: inline-block;
+    label + input {
+      display: none;
+    }
+  }
+  &_button {
+    background: @decor;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: @main;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &_false {
+    .SameCheckbox;
+    &:before {
+      .SameCheckboxBefore
+    }
+  }
+  &_true {
+    .SameCheckbox;
+    &:before {
+      .SameCheckboxBefore;
+      background: @arrows no-repeat 0 0;
+      border: 1px solid @decor;
+    }
+  }
+}
