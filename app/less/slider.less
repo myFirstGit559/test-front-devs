@@ -42,15 +42,21 @@
       width: 11px;
       height: 13px;
       cursor: pointer;
+      border: 0;
+      box-shadow: none;
       &:hover {
         opacity: 0.8;
+        outline: none;
+      }
+      &:disabled {
+        opacity: 0;
       }
     }
     .prev {
-      background: @arrows no-repeat -14px 0;
+      background: @main @arrows no-repeat -14px 0;
     }
     .next {
-      background: @arrows no-repeat -31px 0;
+      background: @main @arrows no-repeat -31px 0;
     }
   }
   &__wrap{
