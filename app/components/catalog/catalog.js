@@ -1,12 +1,8 @@
 module.exports = function(shopApp){
     const catalogCtrl = function (prodService) {
         const ctrl = this;
-        ctrl.$onInit = function() {
-            console.log(ctrl.WhatToShow);
-        };
         //filter checkboxes
         ctrl.changeShow = function() {
-            console.log(1);
             ctrl.show = ctrl.WhatToShow;
         };
         ctrl.data = {};
@@ -22,7 +18,7 @@ module.exports = function(shopApp){
             })
             .getJson('children', function(data) {
                 ctrl.data.children = data;
-                ctrl.show.children = true;
+                ctrl.show.children = false;
             });
     };
     const catalogConfig = {
