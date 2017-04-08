@@ -12,8 +12,6 @@ module.exports = function(shopApp){
                     } else {
                         product.emptySize = true;
                     }
-
-
                 });
                 list = ctrl.prodList;
             }

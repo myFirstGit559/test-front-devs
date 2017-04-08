@@ -6,7 +6,7 @@ module.exports = function(shopApp){
             ctrl.whatToShow = {
                 men: true,
                 women: true,
-                children: true
+                children: false
             }
         };
         ctrl.$onInit = function(){
