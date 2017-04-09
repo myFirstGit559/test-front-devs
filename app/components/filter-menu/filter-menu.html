@@ -5,7 +5,6 @@
             <label class="category__check_{{$ctrl.whatToShow.women}}" for="women">women</label><input type="checkbox" ng-model="$ctrl.whatToShow.women" ng-change="$ctrl.changeView()" value="women" name="women" id="women">
             <label class="category__check_{{$ctrl.whatToShow.children}}" for="children">children</label><input type="checkbox" ng-model="$ctrl.whatToShow.children" ng-change="$ctrl.changeView()" value="children" name="children" id="children">
         </div>
-
         <input type="button" name="all" id="all" class="category__check_button" ng-click="$ctrl.whatToShow.men = true;$ctrl.whatToShow.women = true;$ctrl.whatToShow.children=true;" value="see all products">
     </div>
 </div>
