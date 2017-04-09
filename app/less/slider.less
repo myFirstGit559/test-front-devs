@@ -1,26 +1,37 @@
 .hr {
   width: 100%;
   max-width: 1087px;
-  height: 3px;
+  height: 2px;
   background: @inactive;
   display: inline-block;
   margin-bottom: 50px;
 }
-.catalog__wrap slider:nth-child(2*n) {
-  .slider_title {
-    float: left;
+.catalog__wrap slider:nth-child(2n) {
+  .slider{
+    &_title {
+      float: right;
+      padding-left: 8px;
+    }
+    &_pagination {
+      text-align: left;
+    }
   }
 }
-.catalog__wrap slider:nth-child(2*n + 1) {
-  .slider_title {
-    float: right;
+.catalog__wrap slider:nth-child(2n + 1) {
+  .slider{
+    &_title {
+      float: left;
+      padding-right: 44px;
+    }
+    &_pagination {
+      text-align: right;
+    }
   }
 }
 .slider{
   &_title {
     text-transform: uppercase;
-    font-size: 20px;
-    padding-right: 40px;
+    font-size: 18px;
     background: @main;
     display: inline-block;
     position: relative;
@@ -31,7 +42,6 @@
     max-width: 1087px;
     color: @decor;
     display: block;
-    text-align: right;
     margin-bottom: 15px;
     p {
       font-size: 15px;
@@ -53,10 +63,10 @@
       }
     }
     .prev {
-      background: @main @arrows no-repeat -14px 0;
+      background: @main @arrows no-repeat -20px 0;
     }
     .next {
-      background: @main @arrows no-repeat -31px 0;
+      background: @main @arrows no-repeat -38px 0;
     }
   }
   &__wrap{
@@ -70,7 +80,7 @@
     width: 100%;
     margin-bottom: 100px;
     .responsive(@mobile,{
-      width: 300px;
+      width: 260px;
     });
   }
   &__unit {
@@ -103,10 +113,10 @@
       max-width: (@tablet/2 + 25/2 - 30)/@tablet * 100%;
     });
     .responsive(@mobile,{
-      width: 300px;
+      width: 260px;
       margin-right: 0;
-      min-width: 300px;
-      max-width: 300px;
+      min-width: 260px;
+      max-width: 260px;
     });
     &:last-child {
       margin-right: 0;
@@ -120,9 +130,10 @@
       justify-content: space-between;
       align-items: center;
       .price {
-        font-size: 22px;
+        font-size: 20px;
         span {
           font-family: sans-serif;
+          font-size: 19px;
           font-weight: 100;
         }
       }
@@ -146,4 +157,14 @@
   height: 22px;
   display: inline-block;
   margin-right: 4px;
+}
+.size {
+  background: @blocks;
+}
+.select-img {
+  display: block;
+  width: 13px;
+  height: 7px;
+  position: relative;
+  background: @arrows no-repeat 0 15px;
 }

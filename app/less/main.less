@@ -22,11 +22,23 @@ button:focus{
 }
 html,
 body {
-  min-width: 320px;
+  min-width: 265px;
   background: @main;
   color: @text;
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'quicksandbold',sans-serif;
+}
+select {
+  border: none;
+  font-family: 'quicksandbold', sans-serif;
+  color: @text;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100000;
+  &:focus {
+    outline: none;
+  }
 }
 .logo {
   margin: 25px auto 42px;

@@ -1,11 +1,16 @@
 .SameCheckboxBefore {
   content: '';
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  margin-right: 17px;
+  position: relative;
+  background: @main;
+  cursor: pointer;
+  top: -2px;
+  box-sizing: border-box;
   border-radius: 3px;
-  border: 1px solid @inactive;
+  border: 2px solid @inactive;
 }
 .SameCheckbox {
   text-transform: uppercase;
@@ -19,25 +24,47 @@
   width: 100%;
   max-width: 1087px;
   background: @blocks;
+  height: 142px;
   display: flex;
   padding: 20px;
   box-sizing: border-box;
   margin: 0 auto 20px;
   justify-content: space-between;
+  align-items: center;
+  .responsive(@mobile,{
+      flex-direction: column;
+      height: 190px;
+  });
   &_checkboxes {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    label {
+      display: flex;
+      align-items: center;
+    }
     label + input {
       display: none;
     }
+    .responsive(@mobile,{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      height: 100px;
+    });
   }
   &_button {
     background: @decor;
     border-radius: 4px;
-    padding: 10px 15px;
+    padding: 18px 36px;
     color: @main;
     border: 0;
+    font-size: 12px;
+    font-family: 'quicksandbold', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
+    .responsive(@tablet,{
+      padding: 18px 20px;
+    });
   }
   &_false {
     .SameCheckbox;
@@ -49,8 +76,8 @@
     .SameCheckbox;
     &:before {
       .SameCheckboxBefore;
-      background: @arrows no-repeat 0 0;
-      border: 1px solid @decor;
+      border: 2px solid @decor;
+      background: @main @arrows no-repeat 1px 3px;
     }
   }
 }

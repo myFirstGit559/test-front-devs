@@ -3,6 +3,10 @@ module.exports = function(shopApp){
         const ctrl = this;
         var list = null;
         ctrl.currentPage = 0;
+        var eventMethods = function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        };
         ctrl.$doCheck = function(){
             if(list == null && angular.isDefined(ctrl.prodList)){
                 var lg = ctrl.prodList.length;
@@ -25,7 +29,6 @@ module.exports = function(shopApp){
                     console.log('resize');
                     pageCount();
                 });
-                console.log(document.documentElement.clientWidth);
                 angular.forEach(ctrl.prodList, function (product, i) {
                     if(angular.isArray(product.sizes)){
                         product.sizes.unshift('size');
@@ -37,14 +40,12 @@ module.exports = function(shopApp){
                 list = ctrl.prodList;
             }
         };
-        ctrl.moveLeft = function() {
-
-        };
-        ctrl.moveRight = function() {
-
-        };
-        ctrl.inner = function(id) {
+        ctrl.inner = function(event, id) {
+            eventMethods(event);
             $state.go('product',{title:ctrl.title,id:id});
+        };
+        ctrl.size = function(event) {
+            eventMethods(event);
         }
     };
     const sliderConfig = {
