@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="wrap_category__check">
+    <div class="category__check">
+        <a class="back" ui-sref="catalog">Back to catalog</a>
+    </div>
+</div>
+<div class="hr"><p class="slider_title" ng-bind="$ctrl.product.name"></p></div>
+<div class="product__block">
+    <div class="product__block_img"><img ng-src="../img/{{$ctrl.product.imgs}}"></div>
+    <div class="product__block_info">
+        <div class="price">
+            <div>{{$ctrl.product.price|number:2}}<span>&euro;</span></div>
+            <div>price</div>
+        </div>
+        <div class="colors" ng-hide="$ctrl.product.colors==null">
+            <div class="color-round" ng-repeat="color in $ctrl.product.colors" style="background-color:{{color}}"></div>
+            <div>colors</div>
+        </div>
+        <div class="sizes">
+            <div ng-bind="$ctrl.product.strSizes"></div>
+            <div>sizes</div>
+        </div>
+    </div>
+</div>

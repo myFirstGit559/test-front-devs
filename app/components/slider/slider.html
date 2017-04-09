@@ -9,8 +9,9 @@
             <div class="slider__unit_szc">
                 <div class="size">
                     <p ng-bind="product.sizes" ng-show="product.emptySize"></p>
-                    <label class="select-img" for="size"></label>
-                    <select ng-model="product.size" class="size" id="size" ng-hide="product.emptySize" ng-options="option as option for option in product.sizes" ng-click="$ctrl.size($event)"></select>
+                    <label class="select-img" for="{{product.id}}" ng-click="$ctrl.size($event)"  ng-hide="product.emptySize">
+                        <select ng-model="product.size" class="size" id="{{product.id}}" name="{{product.id}}" ng-hide="product.emptySize" ng-options="option as option for option in product.sizes" ng-click="$ctrl.size($event)"></select>
+                    </label>
                 </div>
                 <div class="color">
                     <div class="color-round" ng-repeat="color in product.colors" style="background-color:{{color}}"></div>
