@@ -2,13 +2,13 @@
 const path = require('path');
 const webpack = require("webpack");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractLESS = new ExtractTextPlugin({filename:'css/styles.css',allChunks: true});
+const extractLESS = new ExtractTextPlugin({filename:'styles.css',allChunks: true});
 
 const config = {
     context: __dirname + '/app',
     entry: './index.js',
     resolve: {
-        extensions: ['.js', '.less', '.png', '.jpg', '.json', 'html'],
+        extensions: ['.js', '.less', '.png', '.jpg', '.json', '.html', '.eot', '.ttf', '.svg', '.woff', '.woff2'],
         modules: ['node_modules']
     },
     devServer: {
@@ -22,13 +22,15 @@ const config = {
         rules: [
             {
                 test: /\.less$/i,
-                loader: extractLESS.extract(['css-loader', 'less-loader' ])
+                loader: extractLESS.extract(['css-loader?relativeUrls=true', 'less-loader?relativeUrls=true'])
             },
             {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loaders: ['file-loader?name=./img/[name].[ext]',
-                          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
-                ]
+                test: /\.(png|jpe?g)$/,
+                loaders: ['file-loader?name=./img/[name].[ext]']
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loaders: ['file-loader?name=./font/[name].[ext]']
             },
             {
                 test: /\.json$/,
